@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                        isScrolling = false
                        direction = 1
                        horizontalScroll.isEnableScrolling = true
-                   }, 800)
+                   }, 450)
                    horizontalScroll.post {
                        scrollList(i , middle)
 //                       horizontalScroll.smoothScrollTo(middle, 0)
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                        isScrolling = false
                        direction = 2
                        horizontalScroll.isEnableScrolling = true
-                   },800)
+                   },450)
                    horizontalScroll.post {
                        scrollList(i , right)
                    }
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                          isScrolling = false
                          direction = 0
                          horizontalScroll.isEnableScrolling = true
-                     },800)
+                     },450)
                      horizontalScroll.post {
                          scrollList(i , left)
 
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
                        direction = 1
                        isScrolling = false
                        horizontalScroll.isEnableScrolling = true
-                   },1000)
+                   },450)
                    horizontalScroll.post {
                        scrollList(i2 , middle)
                    }
@@ -119,10 +119,10 @@ class MainActivity : AppCompatActivity() {
     fun scrollList (from: Int, to : Int) {
         val realSmoothScrollAnimation =
             ValueAnimator.ofInt(from, to)
-        realSmoothScrollAnimation.duration = 700
+        realSmoothScrollAnimation.duration = 400
         realSmoothScrollAnimation.addUpdateListener { animation ->
             val scrollTo = animation.animatedValue as Int
-            horizontalScroll.scrollTo(scrollTo, 0)
+            horizontalScroll.smoothScrollTo(scrollTo, 0)
         }
 
         realSmoothScrollAnimation.start()

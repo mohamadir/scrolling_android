@@ -8,9 +8,11 @@
     <com.example.mykotlintutorial.ui.CustomHorizontalScroll
         android:id="@+id/horizontalScroll"
         android:layout_width="wrap_content"
+        android:scrollbars="none"
         android:layout_height="match_parent">
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
+            android:scrollbars="vertical"
             android:id="@+id/nestedScroll"
             android:layout_height="wrap_content">
     <TableLayout
