@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
     tools:context=".ui.MainActivity">
-    <com.example.mykotlintutorial.ui.CustomHorizontalScroll
+    <com.example.mykotlintutorial.ui.SwipableHorizontalView
         android:id="@+id/horizontalScroll"
         android:layout_width="wrap_content"
         android:scrollbars="none"
@@ -17,6 +18,7 @@
             android:layout_height="wrap_content">
     <TableLayout
         android:layout_width="wrap_content"
+        android:layoutDirection="ltr"
         android:layout_height="match_parent">
         <TableRow android:layout_width="wrap_content"
             android:layout_height="50dp">
@@ -1700,5 +1702,5 @@
 
     </TableLayout>
         </androidx.core.widget.NestedScrollView>
-    </com.example.mykotlintutorial.ui.CustomHorizontalScroll>
+    </com.example.mykotlintutorial.ui.SwipableHorizontalView>
 </RelativeLayout>
